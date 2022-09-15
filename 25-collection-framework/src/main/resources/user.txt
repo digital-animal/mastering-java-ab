@@ -1,0 +1,4 @@
+# a peroperty example
+Name=Zahidul Islam Jewel
+University=BUET
+Department=CSE

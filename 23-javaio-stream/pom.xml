@@ -1,0 +1,96 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.zahid</groupId>
+  <artifactId>thread-programming-example</artifactId>
+  <packaging>jar</packaging>
+  <version>1.0-SNAPSHOT</version>
+  <name>javaio-streams</name>
+  <url>http://maven.apache.org</url>
+
+
+
+<!-- # Java Version, JUnit5 Version, UTF-8 Encoding --> 
+<properties>
+  <maven.compiler.source>11</maven.compiler.source>
+  <maven.compiler.target>11</maven.compiler.target>
+  <junit.jupiter.version>5.8.1</junit.jupiter.version>
+  <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+</properties>
+
+<build>
+  <pluginManagement>
+    <plugins>
+      <!-- # maven exec plugin for running main with custom configuration -->
+      <plugin>
+          <groupId>org.codehaus.mojo</groupId>
+          <artifactId>exec-maven-plugin</artifactId>
+          <version>3.0.0</version>
+          <configuration>
+              <mainClass>com.zahid.buffered.BufferedTest</mainClass>
+              <mainClass>com.zahid.bytearray.ByteArrayInputTest</mainClass>
+              <mainClass>com.zahid.bytearray.ByteArrayOutputTest</mainClass>
+              <mainClass>com.zahid.chararray.CharArrayReaderTest</mainClass>
+              <mainClass>com.zahid.dualfilecopy.DualFileCopyTest</mainClass>
+              <mainClass>com.zahid.filecopy.FileCopyTest</mainClass>
+              <mainClass>com.zahid.filehandling.FileHandlingTest</mainClass>
+              <mainClass>com.zahid.filehandling.FileMethodTest</mainClass>
+              <mainClass>com.zahid.fileio.FileInputExample</mainClass>
+              <mainClass>com.zahid.fileio.FileOutputExample</mainClass>
+              <mainClass>com.zahid.pipedproducerconsumer.PipedTest</mainClass>
+              <mainClass>com.zahid.randomaccess.RandomAccessTest</mainClass>
+              <mainClass>com.zahid.serializecustomer.SerializeCustomerTest</mainClass>
+              <mainClass>com.zahid.serializecustomer.DeserializeCustomerTest</mainClass>
+              <mainClass>com.zahid.serializedatastream.DataOutputTest</mainClass>
+              <mainClass>com.zahid.serializedatastream.DataInputTest</mainClass>
+              <mainClass>com.zahid.serializefloat.FloatOutputTest</mainClass>
+              <mainClass>com.zahid.serializefloat.FloatInputTest</mainClass>
+              <mainClass>com.zahid.serializeobject.ObjectOutputTest</mainClass>
+              <mainClass>com.zahid.serializeobject.ObjectInputTest</mainClass>
+              <mainClass>com.zahid.serializeprintstream.PrintOutputTest</mainClass>
+              <mainClass>com.zahid.serializeprintstream.PrintInputTest</mainClass>
+          </configuration>
+      </plugin>      
+      
+      <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-surefire-plugin -->        
+      <!-- # Maven Surefire Plugin for JUnit5 --> 
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>3.0.0-M5</version>
+      </plugin>
+
+    </plugins> 
+  </pluginManagement>
+</build>
+
+<dependencies>
+  <!-- # Dependency for JUnit5 -->
+    <!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-engine -->
+  <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-engine</artifactId>
+      <version>${junit.jupiter.version}</version>
+      <scope>test</scope>
+  </dependency>
+  
+  <!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api -->
+  <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-api</artifactId>
+      <version>${junit.jupiter.version}</version>
+      <scope>test</scope>
+  </dependency>  
+
+  <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+  <dependency>
+    <groupId>org.projectlombok</groupId>
+    <artifactId>lombok</artifactId>
+    <version>1.18.22</version>
+    <scope>provided</scope>
+  </dependency>
+  
+</dependencies>
+
+
+</project>
